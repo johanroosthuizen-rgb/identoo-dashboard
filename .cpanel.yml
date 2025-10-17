@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/sites/29a/7/7ded354faa/identoo.co/
+    - /bin/cp -R * $DEPLOYPATH

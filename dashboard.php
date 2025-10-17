@@ -10,7 +10,7 @@ $user_id = $_SESSION['user_id'] ?? null;
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Identoo — Dashboard v2.1 Connected</title>
+<title>Identoo — Dashboard v2.1 connected</title>
 
 <!-- Google Fonts (live switchable) -->
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Poppins:wght@400;600;700&family=Roboto:wght@400;500;700&family=Playfair+Display:wght@500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
@@ -973,4 +973,5 @@ initDevice();
 </script>
 </body>
 </html>
+
 

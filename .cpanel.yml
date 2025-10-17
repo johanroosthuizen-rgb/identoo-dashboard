@@ -1,5 +1,12 @@
 ---
 deployment:
   tasks:
+    # Define your live site path
     - export DEPLOYPATH=/home/sites/29a/7/7ded354faa/identoo.co/
+    
+    # Copy all files from the repo into your web root
     - /bin/cp -R * $DEPLOYPATH
+    
+    # Ensure correct permissions
+    - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
+    - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;

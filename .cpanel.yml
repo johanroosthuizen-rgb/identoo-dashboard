@@ -1,18 +1,10 @@
 ---
 deployment:
   tasks:
-    # Define your working and live paths
     - export SOURCEPATH=/home/sites/29a/7/7ded354faa/identoo.co/
     - export DEPLOYPATH=/home/sites/29a/7/7ded354faa/identoo.co/
-
-    # Sync repository files to the live path (excluding .git and deployment files)
-    - echo "Starting post-deploy copy..."
-    - /bin/rsync -avz --exclude '.git' --exclude '.cpanel.yml' --exclude '.gitignore' $SOURCEPATH $DEPLOYPATH
-
-    # Set proper permissions
-    - echo "Fixing permissions..."
+    - echo "Deploying files to live path..."
+    - /bin/cp -R $SOURCEPATH* $DEPLOYPATH
     - /bin/find $DEPLOYPATH -type d -exec chmod 755 {} \;
     - /bin/find $DEPLOYPATH -type f -exec chmod 644 {} \;
-
-    # Log completion
-    - echo "Deployment completed successfully at $(date)" > $DEPLOYPATH/deploy.log
+    - echo "Deployment completed successfully" > $DEPLOYPATH/deploy.log

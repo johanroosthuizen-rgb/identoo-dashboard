@@ -1,6 +1,0 @@
----
-deployment:
-  tasks:
-    - /bin/echo "Starting deploy..."
-    - /bin/cp -R ./ /home/sites/29a/7/7ded354faa/identoo.co/
-    - /bin/echo "Deployment completed" > /home/sites/29a/7/7ded354faa/identoo.co/deploy.log
